@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Entre Futuros</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="navbar">
+
+        <a class="logo" href="#" onclick="openTab(event, 'inicio')">
+            <img src="Entre Futuros- Logo.png"alt="Entre Futuros">
+        </a>
+
+
+        <nav>
+            <a href="#" onclick="openTab(event, 'inicio')">
+                Início
+            </a>
+
+            <a href="#" onclick="openTab(event, 'teste')">
+                Teste de Perspectiva
+            </a>
+
+            <a href="#" onclick="openTab(event, 'evolucao')">
+                Minha Evolução
+            </a>
+
+            <a href="#" onclick="openTab(event, 'caminhos')">
+                Caminhos
+            </a>
+        </nav>
+
+        <a class="about" href="#" onclick="openTab(event, 'sobre')">
+            ⓘ Sobre o projeto
+        </a>
+
+    </header>
+
+
+    <!-- CONTEÚDO -->
+
+    <main>
+
+        <!-- INÍCIO -->
+        <section id="inicio" class="tab-content active">
+
+            <div class="hero-card">
+
+                <p>UM PROJETO SOBRE O SEU FUTURO</p>
+
+                <h1>
+                    O futuro não começa depois da escola.
+                    <br>
+                    Ele começa a ser construído durante ela.
+                </h1>
+
+                <p>
+                    Entenda como suas experiências no ensino médio
+                    influenciam a forma como você enxerga o futuro.
+                </p>
+
+                <h1>✦ O que é o projeto Entre Futuros?</h1>
+
+                <p>
+                    Um projeto para entender como estudantes do ensino médio
+                    constroem sua visão sobre o futuro e exploram caminhos
+                    possíveis depois da escola.
+                </p>
+
+                <ul>
+                    <li>✓ Questionário anônimo</li>
+                    <li>✓ Resultado personalizado</li>
+                    <li>✓ Acompanhamento da evolução</li>
+                    <li>✓ Exploração de caminhos</li>
+                    <li>✓ Guia de empregos</li>
+                </ul>
+
+                <a class="btn primary" href="#" onclick="openTab(event, 'teste')">
+                    Testar meus conhecimentos
+                </a>
+
+                <br>
+
+                <small>◷ Leva aproximadamente 5 minutos</small>
+
+            </div>
+
+
+            <h4>Acompanhe sua evolução</h4>
+
+            <section class="features container">
+
+                <a href="#" class="feature" onclick="openTab(event, 'teste')">
+
+                    <span class="icon purple">✦</span>
+
+                    <div>
+                        <h3>Entenda sua perspectiva</h3>
+
+                        <p>
+                            Responda ao questionário e descubra como
+                            sua visão de futuro está sendo formada.
+                        </p>
+                    </div>
+
+                </a>
+
+            </section>
+
+        </section>
+
+
+        <!-- TESTE -->
+        <section id="teste" class="tab-content">
+
+            <div class="container">
+
+                <h1>Teste de Perspectiva</h1>
+
+                <p>
+                    Responda ao questionário para entender melhor
+                    como você enxerga seu futuro.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- EVOLUÇÃO -->
+        <section id="evolucao" class="tab-content">
+
+            <div class="container">
+
+                <h1>Minha Evolução</h1>
+
+                <p>
+                    Aqui você poderá acompanhar como sua perspectiva
+                    sobre o futuro muda ao longo do tempo.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CAMINHOS -->
+        <section id="caminhos" class="tab-content">
+
+            <div class="container">
+
+                <h1>Caminhos</h1>
+
+                <p>
+                    Explore diferentes possibilidades para o seu futuro.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- SOBRE -->
+        <section id="sobre" class="tab-content">
+
+            <div class="container">
+
+                <h1>Sobre o projeto</h1>
+
+                <p>
+                    O Entre Futuros é um projeto voltado para entender
+                    como estudantes do ensino médio constroem sua visão
+                    sobre o futuro.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function openTab(event, tabId) {
+
+            event.preventDefault();
+
+            // Esconde todas as seções
+            document.querySelectorAll(".tab-content").forEach(tab => {
+                tab.classList.remove("active");
+            });
+
+            // Mostra a seção escolhida
+            document.getElementById(tabId).classList.add("active");
+
+        }
+
+    </script>
+
+</body>
+
+</html>

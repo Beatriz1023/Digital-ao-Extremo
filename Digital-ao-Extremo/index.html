@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portal CEEP Helio Xavier de Vasconcelos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <main class="app-shell">
+        <header class="topbar">
+          <div class="brand">
+            <span class="brand-mark">CE</span>
+            <span>
+              <strong>Portal CEEP</strong>
+              <span class="brand-copy">Helio Xavier de Vasconcelos</span>
+            </span>
+          </div>
+          <label class="search-wrap">
+            <span class="ui-icon">S</span>
+            <input placeholder="Pesquisar materiais, avisos, simulados..." aria-label="Pesquisar no portal" />
+          </label>
+          <div class="actions">
+            <a class="ghost-btn" href="#entrar">Entrar</a>
+          </div>
+        </header>
+
+        <section class="hero">
+          <div>
+            <span class="badge gold-badge">Portal escolar integrado</span>
+            <h1>Portal CEEP Helio Xavier de Vasconcelos</h1>
+            <p>Conectando estudantes, professores e conhecimento em um so lugar.</p>
+            <div class="hero-actions" id="entrar">
+              <a class="secondary-btn" href="#login">Entrar</a>
+              <a class="primary-btn" href="#aluno">Sou aluno</a>
+              <a class="ghost-btn" href="#professor">Sou professor</a>
+            </div>
+            <div class="notice-strip">
+              <span class="ui-icon">!</span>
+              <div>
+                <strong>Aviso importante</strong>
+                <p>Amanha a aula de Matematica sera substituida por Programacao Web I e II.</p>
+              </div>
+            </div>
+            <p class="muted">Cada pagina estudada aproxima voce dos seus sonhos.</p>
+          </div>
+          <div class="hero-crest">
+            <img src="assets/brasao-ceep.png?v=ceep-oficial" alt="Brasao do CEEP Helio Xavier de Vasconcelos" />
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <div>
+              <h2>Informacoes da escola</h2>
+              <p>Avisos, noticias, eventos e calendario em uma tela.</p>
+            </div>
+          </div>
+          <div class="grid cols-4">
+            <article class="card">
+              <span class="ui-icon">J</span>
+              <h3>Noticias</h3>
+              <ul class="list">
+                <li><span>Semana de revisao tecnica</span></li>
+                <li><span>Mostra de projetos</span></li>
+                <li><span>Biblioteca atualizada</span></li>
+              </ul>
+            </article>
+            <article class="card">
+              <span class="ui-icon">D</span>
+              <h3>Proximos eventos</h3>
+              <ul class="list">
+                <li><span>12 AGO - Simulado integrado</span></li>
+                <li><span>16 AGO - Conselho de classe</span></li>
+                <li><span>22 AGO - Feira tecnica</span></li>
+              </ul>
+            </article>
+            <article class="card">
+              <span class="ui-icon">C</span>
+              <h3>Calendario escolar</h3>
+              <ul class="list">
+                <li><span>Revisoes semanais</span></li>
+                <li><span>Simulados integrados</span></li>
+                <li><span>Feira tecnica</span></li>
+              </ul>
+            </article>
+            <article class="card">
+              <span class="ui-icon">H</span>
+              <h3>Funcionamento</h3>
+              <ul class="list">
+                <li><span>Manha: 07:00 as 12:00</span></li>
+                <li><span>Tarde: 13:00 as 17:30</span></li>
+                <li><span>Secretaria: 08:00 as 16:00</span></li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="aluno">
+          <div class="section-header">
+            <div>
+              <h2>Area do aluno</h2>
+              <p>Perfil, estudos, simulados, flashcards, cronograma e chat dos estudantes.</p>
+            </div>
+          </div>
+          <div class="grid cols-3">
+            <article class="card"><h3>Plataforma de estudos</h3><p class="muted">Materiais separados por Portugues, Matematica, Biologia e Programacao Web.</p></article>
+            <article class="card"><h3>Assuntos em foco</h3><p class="muted">Funcoes, Revolucao Francesa e Citologia para revisar nesta semana.</p></article>
+            <article class="card"><h3>Incentivos</h3><p class="muted">Conquistas, progresso semanal e mensagens motivacionais.</p></article>
+          </div>
+        </section>
+
+        <section class="section" id="professor">
+          <div class="section-header">
+            <div>
+              <h2>Area do professor e coordenacao</h2>
+              <p>Publicacao de avisos, materiais, simulados, turmas, noticias e estatisticas.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" src="app.js"></script>
+  </body>
+</html>

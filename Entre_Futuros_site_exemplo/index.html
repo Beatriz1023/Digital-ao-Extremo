@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entre Futuros</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="#inicio"><span>✦</span> Entre Futuros</a>
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#teste">Teste de Perspectiva</a>
+      <a href="#evolucao">Minha Evolução</a>
+      <a href="#caminhos">Caminhos</a>
+      <a href="#dados">O que os estudantes pensam?</a>
+      <a href="#mural">Mural</a>
+    </nav>
+    <a class="about" href="#sobre">ⓘ Sobre o projeto</a>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <span class="eyebrow">UM PROJETO SOBRE FUTURO, ESCOLHAS E ESCOLA</span>
+          <h1>O futuro não acontece depois da escola.<br>Ele começa a ser construído durante ela.</h1>
+          <p>Descubra como suas experiências, escolhas e influências estão moldando sua perspectiva sobre o que vem depois do ensino médio.</p>
+          <a class="btn primary" href="#teste">Descobrir minha perspectiva <span>→</span></a>
+          <small>◷ Leva aproximadamente 5 minutos</small>
+        </div>
+        
+        <div class="hero-card">
+          <h2>♧ O que é o Entre Futuros?</h2>
+          <p>Um projeto para entender como estudantes do ensino médio constroem sua visão sobre o futuro e exploram caminhos possíveis depois da escola.</p>
+          <ul>
+            <li>✓ Questionário anônimo</li>
+            <li>✓ Resultado personalizado</li>
+            <li>✓ Acompanhamento da evolução</li>
+            <li>✓ Dados gerais dos estudantes</li>
+            <li>✓ Exploração de caminhos</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="features container">
+      <a href="#teste" class="feature">
+        <span class="icon purple">✦</span>
+        <div><h3>Entenda sua perspectiva</h3><p>Responda ao questionário e descubra como sua visão de futuro está sendo formada.</p></div>
+      </a>
+      <a href="#evolucao" class="feature">
+        <span class="icon green">↗</span>
+        <div><h3>Acompanhe sua evolução</h3><p>Veja como suas respostas mudam com o tempo e acompanhe seu crescimento.</p></div>
+      </a>
+      <a href="#caminhos" class="feature">
+        <span class="icon yellow">☷</span>
+        <div><h3>Explore caminhos</h3><p>Conheça diferentes possibilidades depois do ensino médio e seus desafios.</p></div>
+      </a>
+      <a href="#dados" class="feature">
+        <span class="icon blue">♧</span>
+        <div><h3>Veja o que os alunos pensam</h3><p>Conheça dados anônimos sobre sonhos, dúvidas e expectativas.</p></div>
+      </a>
+      <a href="#mural" class="feature">
+        <span class="icon pink">♡</span>
+        <div><h3>Compartilhe no mural</h3><p>Deixe uma mensagem anônima e veja o que outros estudantes têm a dizer.</p></div>
+      </a>
+    </section>
+
+    <section id="teste" class="section container">
+      <div class="section-heading">
+        <span class="eyebrow">TESTE DE PERSPECTIVA</span>
+        <h2>Como você enxerga o seu futuro?</h2>
+        <p>Não existe resposta certa. O objetivo é entender o momento em que você está agora.</p>
+      </div>
+
+      <form id="quizForm" class="quiz-card">
+        <div class="progress"><span id="progressBar"></span></div>
+        <p id="questionCounter">Pergunta 1 de 8</p>
+
+        <div class="question active">
+          <h3>1. Quando você pensa no futuro depois do ensino médio, você...</h3>
+          <label><input type="radio" name="q1" value="determinado"> Já tenho um plano bem definido.</label>
+          <label><input type="radio" name="q1" value="explorador"> Tenho algumas ideias, mas quero conhecer possibilidades.</label>
+          <label><input type="radio" name="q1" value="transformacao"> Mudo bastante de ideia conforme vivo novas experiências.</label>
+          <label><input type="radio" name="q1" value="descobrindo"> Ainda não faço ideia e estou tentando descobrir.</label>
+        </div>
+
+        <div class="question">
+          <h3>2. O quanto a escola influencia suas escolhas para o futuro?</h3>
+          <label><input type="radio" name="q2" value="determinado"> Muito: professores e atividades me ajudam a decidir.</label>
+          <label><input type="radio" name="q2" value="explorador"> Um pouco: algumas experiências despertaram interesses.</label>
+          <label><input type="radio" name="q2" value="transformacao"> Depende do momento e das experiências.</label>
+          <label><input type="radio" name="q2" value="descobrindo"> Pouco: ainda não vejo uma ligação clara.</label>
+        </div>
+
+        <div class="question">
+          <h3>3. Qual fator mais pesa nas suas decisões?</h3>
+          <label><input type="radio" name="q3" value="explorador"> Meus interesses e curiosidades.</label>
+          <label><input type="radio" name="q3" value="determinado"> Meus objetivos profissionais.</label>
+          <label><input type="radio" name="q3" value="descobrindo"> Minha situação financeira.</label>
+          <label><input type="radio" name="q3" value="transformacao"> Família, amigos e pessoas próximas.</label>
+        </div>
+
+        <div class="question">
+          <h3>4. Quando alguém pergunta “o que você vai fazer depois da escola?”...</h3>
+          <label><input type="radio" name="q4" value="determinado"> Eu sei exatamente o que responder.</label>
+          <label><input type="radio" name="q4" value="explorador"> Tenho algumas opções para contar.</label>
+          <label><input type="radio" name="q4" value="transformacao"> Minha resposta muda dependendo da época.</label>
+          <label><input type="radio" name="q4" value="descobrindo"> Fico sem saber o que responder.</label>
+        </div>
+
+        <div class="question">
+          <h3>5. O que mais preocupa você sobre o futuro?</h3>
+          <label><input type="radio" name="q5" value="descobrindo"> Não saber qual caminho escolher.</label>
+          <label><input type="radio" name="q5" value="determinado"> Conseguir alcançar meus objetivos.</label>
+          <label><input type="radio" name="q5" value="explorador"> Encontrar algo que realmente combine comigo.</label>
+          <label><input type="radio" name="q5" value="transformacao"> As mudanças que ainda podem acontecer.</label>
+        </div>
+
+        <div class="question">
+          <h3>6. Como você se sente ao pensar em tomar decisões importantes?</h3>
+          <label><input type="radio" name="q6" value="determinado"> Confiante.</label>
+          <label><input type="radio" name="q6" value="explorador"> Curioso.</label>
+          <label><input type="radio" name="q6" value="transformacao"> Em dúvida, mas aberto a mudanças.</label>
+          <label><input type="radio" name="q6" value="descobrindo"> Inseguro ou sem direção.</label>
+        </div>
+
+        <div class="question">
+          <h3>7. Qual frase mais combina com você?</h3>
+          <label><input type="radio" name="q7" value="determinado"> “Eu já sei onde quero chegar.”</label>
+          <label><input type="radio" name="q7" value="explorador"> “Quero experimentar antes de decidir.”</label>
+          <label><input type="radio" name="q7" value="transformacao"> “Meu futuro está mudando junto comigo.”</label>
+          <label><input type="radio" name="q7" value="descobrindo"> “Ainda estou tentando me encontrar.”</label>
+        </div>
+
+        <div class="question">
+          <h3>8. O que você gostaria que a escola oferecesse mais?</h3>
+          <label><input type="radio" name="q8" value="explorador"> Mais contato com diferentes profissões.</label>
+          <label><input type="radio" name="q8" value="determinado"> Mais preparação para faculdade e carreira.</label>
+          <label><input type="radio" name="q8" value="transformacao"> Mais experiências práticas.</label>
+          <label><input type="radio" name="q8" value="descobrindo"> Mais orientação para quem ainda está indeciso.</label>
+        </div>
+
+        <div class="quiz-actions">
+          <button type="button" id="prevBtn" class="btn secondary" disabled>← Voltar</button>
+          <button type="button" id="nextBtn" class="btn primary">Próxima →</button>
+        </div>
+      </form>
+
+      <div id="result" class="result-card hidden"></div>
+    </section>
+
+    <section id="evolucao" class="section light">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">MINHA EVOLUÇÃO</span>
+          <h2>Veja como sua perspectiva pode mudar</h2>
+          <p>Seu histórico fica salvo apenas neste navegador. Não é necessário criar uma conta.</p>
+        </div>
+        <div class="evolution-grid">
+          <div class="panel">
+            <h3>Histórico de resultados</h3>
+            <div id="history"></div>
+            <button id="clearHistory" class="text-btn">Limpar meu histórico</button>
+          </div>
+          <div class="panel">
+            <h3>O que isso significa?</h3>
+            <p>Suas escolhas não precisam ser definitivas. A ideia desta área é mostrar que a perspectiva pode mudar conforme você conhece pessoas, experiências, áreas e oportunidades.</p>
+            <div class="mini-timeline">
+              <span>1º ano</span><i></i><span>2º ano</span><i></i><span>3º ano</span><i></i><span>Depois</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="caminhos" class="section container">
+      <div class="section-heading">
+        <span class="eyebrow">DEPOIS DA ESCOLA</span>
+        <h2>Existem vários caminhos possíveis</h2>
+        <p>Conheça possibilidades sem transformar nenhuma delas em uma escolha obrigatória.</p>
+      </div>
+      <div class="path-grid">
+        <article class="path"><span>🎓</span><h3>Faculdade</h3><p>Para quem deseja aprofundar os estudos em uma área acadêmica ou profissional.</p><button onclick="showPath('Faculdade')">Explorar</button></article>
+        <article class="path"><span>🔧</span><h3>Curso técnico</h3><p>Uma alternativa com formação profissional mais direcionada e prática.</p><button onclick="showPath('Curso técnico')">Explorar</button></article>
+        <article class="path"><span>💼</span><h3>Trabalho</h3><p>Entrar no mercado e construir experiência profissional também pode fazer parte da trajetória.</p><button onclick="showPath('Trabalho')">Explorar</button></article>
+        <article class="path"><span>🚀</span><h3>Empreendedorismo</h3><p>Criar projetos, negócios ou soluções para problemas que você identifica.</p><button onclick="showPath('Empreendedorismo')">Explorar</button></article>
+      </div>
+      <div id="pathDetails" class="path-details hidden"></div>
+    </section>
+
+    <section id="dados" class="section light">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">VISÃO COLETIVA</span>
+          <h2>O que os estudantes pensam?</h2>
+          <p>Exemplo de painel com dados anônimos. Em uma versão real, estes números podem vir de uma pesquisa da escola.</p>
+        </div>
+        <div class="dashboard">
+          <div class="stat-panel">
+            <div class="donut"><strong>62%</strong><span>ainda estão decidindo</span></div>
+            <div class="stat-lines">
+              <div><span>Faculdade</span><b>48%</b><i><em style="width:48%"></em></i></div>
+              <div><span>Trabalho</span><b>26%</b><i><em style="width:26%"></em></i></div>
+              <div><span>Indecisos</span><b>62%</b><i><em style="width:62%"></em></i></div>
+              <div><span>Empreender</span><b>18%</b><i><em style="width:18%"></em></i></div>
+            </div>
+          </div>
+          <div class="stat-panel">
+            <h3>Principais influências</h3>
+            <div class="influence"><span>♡</span><label>Interesses pessoais</label><b>72%</b><i><em style="width:72%"></em></i></div>
+            <div class="influence"><span>♧</span><label>Família</label><b>61%</b><i><em style="width:61%"></em></i></div>
+            <div class="influence"><span>◈</span><label>Situação financeira</label><b>48%</b><i><em style="width:48%"></em></i></div>
+            <div class="influence"><span>♙</span><label>Professores</label><b>37%</b><i><em style="width:37%"></em></i></div>
+            <div class="influence"><span>♧</span><label>Amigos</label><b>29%</b><i><em style="width:29%"></em></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mural" class="section container">
+      <div class="section-heading">
+        <span class="eyebrow">MURAL ANÔNIMO</span>
+        <h2>O que você gostaria de dizer sobre seu futuro?</h2>
+        <p>As mensagens abaixo são exemplos. As mensagens adicionadas por você ficam apenas neste navegador nesta versão.</p>
+      </div>
+      <form id="wallForm" class="wall-form">
+        <textarea id="wallText" maxlength="180" placeholder="Ex.: Tenho medo de escolher errado, mas quero conhecer mais possibilidades..." required></textarea>
+        <button class="btn primary" type="submit">Publicar anonimamente</button>
+      </form>
+      <div id="wall" class="wall"></div>
+    </section>
+
+    <section id="sobre" class="section about-section">
+      <div class="container about-box">
+        <div><span class="eyebrow">SOBRE O PROJETO</span><h2>O futuro é uma construção.</h2></div>
+        <p>O Entre Futuros foi pensado para ajudar estudantes a refletirem sobre como suas experiências no ensino médio influenciam a maneira como enxergam o que vem depois. Ele não escolhe uma profissão pelo aluno: ele ajuda a organizar perguntas, possibilidades e percepções.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>✦ Entre Futuros</div>
+    <span>Projeto escolar • Sem login • Dados pessoais não são solicitados</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
