@@ -1,0 +1,1910 @@
+/* =========================================================
+   ENTRE FUTUROS — STYLE.CSS
+   ========================================================= */
+
+
+/* =========================================================
+   1. CORES
+   ========================================================= */
+
+:root {
+    --ink: #001B29;
+    --navy: #091540;
+    --indigo: #333C77;
+    --persian: #1B2CC1;
+
+    --cyan: #4DD4CD;
+    --ice: #A4CBE3;
+    --azure: #E2F5F3;
+    --blue: #7692FF;
+    --soft: #F5FAFF;
+
+    --shadow: rgba(0, 0, 0, 0.22);
+    --danger: #ff9d9d;
+}
+
+
+/* =========================================================
+   2. CONFIGURAÇÕES GERAIS
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-padding-top: 100px;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+
+    color: var(--azure);
+
+    background: linear-gradient(
+        135deg,
+        var(--ink),
+        var(--navy),
+        var(--indigo)
+    );
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: Arial, sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   3. CABEÇALHO
+   ========================================================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    min-height: 85px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 10px 5%;
+
+    background: rgba(0, 27, 41, 0.97);
+
+    border-bottom: 1px solid var(--indigo);
+
+    backdrop-filter: blur(8px);
+}
+
+
+/* =========================================================
+   4. LOGO
+   ========================================================= */
+
+.logo {
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+.logo img {
+    display: block;
+
+    width: 170px;
+    height: 70px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   5. MENU
+   ========================================================= */
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 5px;
+
+    flex-wrap: wrap;
+}
+
+.navbar nav a {
+    padding: 10px 13px;
+
+    color: var(--ice);
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    white-space: nowrap;
+
+    transition: 0.3s;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: var(--cyan);
+
+    background: rgba(77, 212, 205, 0.08);
+
+    box-shadow:
+        inset 0 0 0 1px rgba(77, 212, 205, 0.18);
+}
+
+
+/* =========================================================
+   6. SISTEMA DE ABAS
+   ========================================================= */
+
+.tab-content {
+    display: none;
+
+    min-height: 70vh;
+}
+
+.tab-content.active {
+    display: block;
+
+    animation: fadeIn 0.4s ease;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================================================
+   7. CONTAINER
+   ========================================================= */
+
+.container {
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding: 50px 25px;
+}
+
+.container h1 {
+    margin-bottom: 20px;
+
+    color: var(--azure);
+
+    font-size: 34px;
+
+    line-height: 1.3;
+}
+
+.container > p {
+    margin-bottom: 25px;
+
+    color: var(--ice);
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   8. PÁGINA INICIAL
+   ========================================================= */
+
+.hero-card {
+    max-width: 1000px;
+
+    margin: 50px auto 30px;
+
+    padding: 50px;
+
+    background: linear-gradient(
+        135deg,
+        var(--navy),
+        var(--indigo)
+    );
+
+    border: 1px solid var(--indigo);
+    border-radius: 18px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+}
+
+.hero-card > p:first-child {
+    margin-bottom: 15px;
+
+    color: var(--cyan);
+
+    font-size: 14px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.hero-card h1 {
+    margin: 20px 0 25px;
+
+    color: var(--azure);
+
+    font-size: 40px;
+
+    line-height: 1.3;
+}
+
+.hero-card h2 {
+    margin-top: 35px;
+    margin-bottom: 15px;
+
+    color: var(--azure);
+}
+
+.hero-card p {
+    margin-bottom: 15px;
+
+    color: var(--ice);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+.hero-card ul {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+    margin-top: 25px;
+    margin-bottom: 20px;
+
+    list-style: none;
+}
+
+.hero-card li {
+    padding: 14px;
+
+    color: var(--ice);
+
+    background: rgba(77, 212, 205, 0.08);
+
+    border: 1px solid rgba(77, 212, 205, 0.2);
+    border-left: 3px solid var(--cyan);
+
+    border-radius: 6px;
+}
+
+
+/* =========================================================
+   9. BOTÕES
+   ========================================================= */
+
+.btn {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 14px 25px;
+
+    color: var(--ink);
+
+    background: linear-gradient(
+        135deg,
+        var(--azure),
+        var(--ice)
+    );
+
+    border: none;
+    border-radius: 7px;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    color: var(--ink);
+
+    background: var(--cyan);
+
+    transform: translateY(-2px);
+}
+
+.btn.secondary {
+    color: var(--azure);
+
+    background: transparent;
+
+    border: 1px solid rgba(164, 203, 227, 0.35);
+
+    box-shadow: none;
+}
+
+.btn.secondary:hover {
+    color: var(--cyan);
+
+    background: rgba(77, 212, 205, 0.08);
+}
+
+.cta-row {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 14px;
+
+    margin-top: 25px;
+}
+
+.cta-row .btn {
+    margin-top: 0;
+}
+
+small {
+    color: var(--ice);
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   10. DESTAQUES DA HOME
+   ========================================================= */
+
+.hero-highlights {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 14px;
+
+    margin: 25px 0 30px;
+}
+
+.hero-highlights div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+
+    padding: 16px 14px;
+
+    background: rgba(10, 18, 41, 0.35);
+
+    border: 1px solid rgba(77, 212, 205, 0.18);
+
+    border-radius: 12px;
+}
+
+.hero-highlights strong {
+    color: var(--cyan);
+
+    font-size: 20px;
+}
+
+.hero-highlights span {
+    color: var(--ice);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   11. FUNCIONALIDADES
+   ========================================================= */
+
+.features {
+    max-width: 1000px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+
+    margin: 0 auto 50px;
+}
+
+.feature {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 18px;
+
+    padding: 25px;
+
+    color: white;
+
+    background: rgba(51, 60, 119, 0.5);
+
+    border: 1px solid var(--indigo);
+    border-left: 3px solid var(--cyan);
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.feature:hover {
+    background: rgba(77, 212, 205, 0.1);
+
+    border-color: var(--cyan);
+
+    transform: translateY(-2px);
+}
+
+.feature h3 {
+    margin-bottom: 8px;
+
+    color: var(--azure);
+
+    line-height: 1.4;
+}
+
+.feature p {
+    color: var(--ice);
+
+    line-height: 1.7;
+}
+
+.icon {
+    min-width: 30px;
+
+    color: var(--cyan);
+
+    font-size: 25px;
+}
+
+
+/* =========================================================
+   12. CAIXAS DE DESTAQUE
+   ========================================================= */
+
+.highlight {
+    margin: 25px 0;
+
+    padding: 18px 20px;
+
+    color: var(--ice);
+
+    background: rgba(77, 212, 205, 0.06);
+
+    border: 1px solid rgba(77, 212, 205, 0.22);
+    border-left: 3px solid var(--cyan);
+
+    border-radius: 9px;
+
+    line-height: 1.8;
+}
+
+.highlight strong {
+    color: var(--cyan);
+}
+
+
+/* =========================================================
+   13. CAMINHOS
+   ========================================================= */
+
+.path-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 22px;
+
+    margin-top: 30px;
+}
+
+.path {
+    padding: 28px;
+
+    background: rgba(51, 60, 119, 0.5);
+
+    border: 1px solid var(--indigo);
+
+    border-radius: 10px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+    transition: 0.3s;
+}
+
+.path:hover {
+    background: rgba(51, 60, 119, 0.65);
+
+    border-color: rgba(77, 212, 205, 0.45);
+
+    transform: translateY(-3px);
+}
+
+.path h3 {
+    margin-bottom: 12px;
+
+    color: var(--azure);
+
+    font-size: 21px;
+}
+
+.path p {
+    margin-bottom: 18px;
+
+    color: var(--ice);
+}
+
+.path ul {
+    padding-left: 20px;
+
+    margin-bottom: 18px;
+}
+
+.path li {
+    margin-bottom: 7px;
+
+    color: var(--ice);
+}
+
+.path button {
+    padding: 10px 18px;
+
+    color: white;
+
+    background: var(--blue);
+
+    border: none;
+    border-radius: 7px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.path button:hover {
+    color: var(--ink);
+
+    background: var(--cyan);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   14. EXPLICAÇÃO DOS CAMINHOS
+   ========================================================= */
+
+.path-details {
+    margin-top: 30px;
+
+    padding: 32px;
+
+    background: rgba(51, 60, 119, 0.65);
+
+    border: 1px solid var(--indigo);
+    border-left: 4px solid var(--cyan);
+
+    border-radius: 12px;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+
+    animation: fadeIn 0.35s ease;
+}
+
+.path-details h2 {
+    margin-bottom: 18px;
+
+    color: var(--cyan);
+
+    font-size: 28px;
+}
+
+.path-details h3 {
+    margin-top: 28px;
+    margin-bottom: 10px;
+
+    color: var(--azure);
+
+    font-size: 19px;
+}
+
+.path-details p {
+    margin-bottom: 15px;
+
+    color: var(--ice);
+
+    line-height: 1.8;
+}
+
+.path-details ul {
+    padding-left: 22px;
+
+    margin-bottom: 20px;
+}
+
+.path-details li {
+    margin-bottom: 8px;
+
+    color: var(--ice);
+}
+
+.path-details .highlight {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   15. TESTE DE PERSPECTIVA
+   ========================================================= */
+
+.quiz-card {
+    max-width: 800px;
+
+    margin: 30px auto;
+
+    padding: 35px;
+
+    background: rgba(51, 60, 119, 0.5);
+
+    border: 1px solid var(--indigo);
+
+    border-radius: 12px;
+
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.15);
+}
+
+.quiz-progress {
+    margin-bottom: 24px;
+}
+
+.progress-meta {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-bottom: 10px;
+
+    color: var(--ice);
+
+    font-size: 14px;
+}
+
+.progress-track {
+    width: 100%;
+    height: 10px;
+
+    overflow: hidden;
+
+    background: rgba(164, 203, 227, 0.12);
+
+    border-radius: 999px;
+}
+
+.progress-track span {
+    display: block;
+
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        var(--cyan),
+        var(--blue)
+    );
+
+    border-radius: inherit;
+
+    transition: width 0.3s ease;
+}
+
+.question {
+    display: none;
+}
+
+.question.active {
+    display: block;
+
+    animation: fadeIn 0.25s ease;
+}
+
+.question h3 {
+    margin-bottom: 25px;
+
+    color: var(--azure);
+
+    line-height: 1.5;
+}
+
+.question label {
+    display: block;
+
+    margin-bottom: 12px;
+
+    padding: 15px;
+
+    color: var(--ice);
+
+    background: rgba(0, 27, 41, 0.4);
+
+    border: 1px solid var(--indigo);
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.question label:hover {
+    background: rgba(77, 212, 205, 0.08);
+
+    border-color: var(--cyan);
+}
+
+.question input {
+    width: auto;
+
+    margin: 0 10px 0 0;
+}
+
+.quiz-status {
+    margin-top: 18px;
+
+    padding: 12px 14px;
+
+    color: var(--soft);
+
+    background: rgba(255, 157, 157, 0.12);
+
+    border: 1px solid rgba(255, 157, 157, 0.35);
+
+    border-radius: 8px;
+}
+
+.quiz-actions {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-top: 30px;
+    padding-top: 25px;
+
+    border-top: 1px solid var(--indigo);
+}
+
+
+/* =========================================================
+   16. RESULTADO DO TESTE
+   ========================================================= */
+
+.result-card {
+    max-width: 800px;
+
+    margin: 30px auto;
+
+    padding: 35px;
+
+    background: rgba(51, 60, 119, 0.5);
+
+    border: 1px solid var(--indigo);
+
+    border-radius: 12px;
+
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.15);
+}
+
+.result-card h2 {
+    margin-bottom: 15px;
+
+    color: var(--cyan);
+}
+
+.result-card p {
+    color: var(--ice);
+
+    line-height: 1.8;
+}
+
+.result-card .profile {
+    margin-bottom: 22px;
+
+    font-size: 1.05rem;
+}
+
+.result-tip {
+    margin: 22px 0;
+
+    padding: 18px 20px;
+
+    background: rgba(77, 212, 205, 0.06);
+
+    border: 1px solid rgba(77, 212, 205, 0.25);
+
+    border-radius: 10px;
+}
+
+.result-tip strong {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--cyan);
+}
+
+.eyebrow {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: var(--cyan);
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+}
+
+.result-score {
+    display: grid;
+
+    gap: 16px;
+
+    margin: 26px 0;
+}
+
+.score {
+    display: grid;
+
+    gap: 8px;
+}
+
+.score span {
+    color: var(--azure);
+
+    font-weight: 600;
+}
+
+.score b {
+    color: var(--soft);
+
+    font-size: 0.95rem;
+}
+
+.score i {
+    display: block;
+
+    width: 100%;
+    height: 10px;
+
+    overflow: hidden;
+
+    background: rgba(164, 203, 227, 0.14);
+
+    border-radius: 999px;
+}
+
+.score em {
+    display: block;
+
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        var(--cyan),
+        var(--blue)
+    );
+
+    border-radius: inherit;
+}
+
+.result-actions {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 24px;
+}
+
+.result-actions .btn {
+    margin-top: 0;
+}
+
+
+/* =========================================================
+   17. PAINÉIS
+   ========================================================= */
+
+.panel {
+    margin-top: 25px;
+
+    padding: 28px;
+
+    background: rgba(51, 60, 119, 0.5);
+
+    border: 1px solid var(--indigo);
+
+    border-radius: 10px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.panel h2 {
+    margin-bottom: 15px;
+
+    color: var(--azure);
+
+    line-height: 1.4;
+}
+
+.panel h3 {
+    margin-top: 22px;
+    margin-bottom: 10px;
+
+    color: var(--cyan);
+}
+
+.panel p,
+.panel li {
+    color: var(--ice);
+
+    line-height: 1.8;
+}
+
+.panel p {
+    margin-bottom: 14px;
+}
+
+.panel ul,
+.panel ol {
+    padding-left: 22px;
+
+    margin: 15px 0;
+}
+
+.panel li {
+    margin-bottom: 8px;
+}
+
+.panel blockquote {
+    margin-top: 15px;
+
+    padding: 20px;
+
+    color: var(--ice);
+
+    background: rgba(0, 27, 41, 0.45);
+
+    border-left: 3px solid var(--cyan);
+
+    border-radius: 7px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   18. CAIXA DE INFORMAÇÕES
+   ========================================================= */
+
+.info-box {
+    margin-top: 25px;
+
+    padding: 28px;
+
+    background: rgba(51, 60, 119, 0.5);
+
+    border: 1px solid var(--indigo);
+    border-left: 3px solid var(--cyan);
+
+    border-radius: 10px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.info-box h2 {
+    margin-bottom: 15px;
+
+    color: var(--azure);
+}
+
+.info-box p {
+    margin-bottom: 14px;
+
+    color: var(--ice);
+
+    line-height: 1.8;
+}
+
+.info-link {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    padding: 10px 16px;
+
+    color: var(--ink);
+
+    background: var(--cyan);
+
+    border-radius: 7px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.info-link:hover {
+    background: var(--ice);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   19. FACULDADES / INSTITUIÇÕES
+   ========================================================= */
+
+.institution-card {
+    margin-top: 25px;
+
+    padding: 28px;
+
+    background: rgba(51, 60, 119, 0.5);
+
+    border: 1px solid var(--indigo);
+
+    border-radius: 12px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.institution-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 18px;
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid rgba(164, 203, 227, 0.14);
+}
+
+.institution-header h2 {
+    color: var(--azure);
+
+    font-size: 23px;
+
+    line-height: 1.4;
+}
+
+.institution-header span {
+    flex-shrink: 0;
+
+    padding: 7px 12px;
+
+    color: var(--cyan);
+
+    background: rgba(77, 212, 205, 0.08);
+
+    border: 1px solid rgba(77, 212, 205, 0.2);
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    text-align: center;
+}
+
+.institution-description {
+    margin-bottom: 22px;
+
+    color: var(--ice);
+
+    line-height: 1.8;
+}
+
+.institution-card > h3 {
+    margin-bottom: 15px;
+
+    color: var(--cyan);
+
+    font-size: 19px;
+}
+
+
+/* =========================================================
+   20. CURSOS
+   ========================================================= */
+
+.course-list {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+.course {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+
+    padding: 14px 16px;
+
+    background: rgba(0, 27, 41, 0.35);
+
+    border: 1px solid rgba(164, 203, 227, 0.12);
+
+    border-radius: 8px;
+
+    transition: 0.2s;
+}
+
+.course:hover {
+    background: rgba(77, 212, 205, 0.05);
+
+    border-color: rgba(77, 212, 205, 0.35);
+}
+
+.course strong {
+    color: var(--azure);
+
+    font-size: 15px;
+}
+
+.course span {
+    color: var(--ice);
+
+    font-size: 13px;
+}
+
+.institution-tip {
+    margin-top: 22px;
+
+    padding: 15px 18px;
+
+    color: var(--ice);
+
+    background: rgba(77, 212, 205, 0.06);
+
+    border: 1px solid rgba(77, 212, 205, 0.2);
+    border-left: 3px solid var(--cyan);
+
+    border-radius: 8px;
+}
+
+.institution-tip strong {
+    color: var(--cyan);
+}
+
+.final-guide {
+    margin-bottom: 20px;
+}
+
+.source-note {
+    margin-top: 25px !important;
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(164, 203, 227, 0.12);
+
+    font-size: 13px;
+}
+
+.source-note strong {
+    color: var(--cyan);
+}
+
+
+/* =========================================================
+   21. EMPREGOS
+   ========================================================= */
+
+.steps {
+    padding-left: 22px;
+}
+
+.source-links {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 18px;
+}
+
+.source-links a {
+    display: inline-block;
+
+    padding: 9px 15px;
+
+    color: var(--ink);
+
+    background: var(--cyan);
+
+    border-radius: 7px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.source-links a:hover {
+    background: var(--ice);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   22. CHECKLIST DO CURRÍCULO
+   ========================================================= */
+
+.checklist {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.checklist label {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 13px 15px;
+
+    color: var(--ice);
+
+    background: rgba(0, 27, 41, 0.4);
+
+    border: 1px solid rgba(164, 203, 227, 0.12);
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.checklist label:hover {
+    background: rgba(77, 212, 205, 0.05);
+
+    border-color: rgba(77, 212, 205, 0.35);
+}
+
+.checklist input {
+    width: auto;
+
+    margin: 0;
+
+    accent-color: var(--cyan);
+}
+
+
+/* =========================================================
+   23. EXEMPLO DE CURRÍCULO
+   ========================================================= */
+
+.curriculo-exemplos {
+    display: block;
+
+    margin-top: 25px;
+}
+
+.curriculo-exemplo {
+    padding: 0;
+
+    background: transparent;
+
+    border: none;
+
+    border-radius: 0;
+
+    box-shadow: none;
+}
+
+.curriculo-exemplo:hover {
+    border: none;
+
+    transform: none;
+}
+
+.curriculo-exemplo > h3 {
+    margin-bottom: 20px;
+
+    color: var(--cyan);
+
+    font-size: 22px;
+}
+
+
+/* =========================================================
+   24. FOLHA BRANCA DO CURRÍCULO
+   ========================================================= */
+
+.modelo-curriculo-folha {
+    width: 100%;
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    padding: 65px 75px;
+
+    color: #222222;
+
+    background: #ffffff;
+
+    border-radius: 8px;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.20);
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   25. CABEÇALHO DO CURRÍCULO
+   ========================================================= */
+
+.modelo-cabecalho {
+    padding-bottom: 25px;
+
+    text-align: center;
+
+    border-bottom: 2px solid #dddddd;
+}
+
+.modelo-cabecalho h1 {
+    margin: 0 0 10px;
+
+    color: #222222;
+
+    font-size: 30px;
+}
+
+.modelo-cabecalho p {
+    margin: 6px 0;
+
+    color: #333333;
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   26. SEÇÕES DO CURRÍCULO
+   ========================================================= */
+
+.modelo-secao {
+    margin-top: 32px;
+}
+
+.modelo-secao h2 {
+    margin-bottom: 12px;
+
+    color: #222222;
+
+    font-size: 21px;
+}
+
+.modelo-secao p {
+    margin-bottom: 12px;
+
+    color: #333333;
+
+    font-size: 17px;
+}
+
+.modelo-secao strong {
+    color: #111111;
+}
+
+.modelo-item {
+    margin-bottom: 12px;
+}
+
+
+/* =========================================================
+   27. TEXTOS DE INSTRUÇÃO DO CURRÍCULO
+   ========================================================= */
+
+.modelo-instrucao {
+    color: #ff2020 !important;
+
+    font-size: 14px !important;
+
+    font-style: italic;
+
+    line-height: 1.5;
+}
+
+.modelo-instrucao.exemplo {
+    margin-top: 12px;
+
+    color: #ff2020 !important;
+}
+
+.modelo-secao .modelo-instrucao strong {
+    color: #ff2020;
+}
+
+
+/* =========================================================
+   28. EXPLICAÇÃO DO EXEMPLO
+   ========================================================= */
+
+.estrutura-curriculo {
+    margin-top: 65px;
+
+    padding: 28px;
+
+    color: var(--ice);
+
+    background: rgba(51, 60, 119, 0.5);
+
+    border: 1px solid var(--indigo);
+    border-left: 3px solid var(--cyan);
+
+    border-radius: 10px;
+
+    line-height: 1.7;
+}
+
+.estrutura-curriculo h3 {
+    margin-bottom: 20px;
+
+    color: var(--azure);
+
+    font-size: 22px;
+}
+
+.estrutura-curriculo h4 {
+    margin-top: 30px;
+    margin-bottom: 12px;
+
+    color: var(--azure);
+
+    font-size: 20px;
+}
+
+.estrutura-curriculo p {
+    margin-bottom: 18px;
+
+    color: var(--ice);
+
+    line-height: 1.8;
+}
+
+.estrutura-curriculo ul {
+    padding-left: 25px;
+
+    margin: 20px 0;
+}
+
+.estrutura-curriculo li {
+    margin-bottom: 14px;
+
+    color: var(--ice);
+}
+
+.estrutura-curriculo strong {
+    color: var(--cyan);
+}
+
+.estrutura-curriculo .highlight {
+    margin-top: 30px;
+}
+
+
+/* =========================================================
+   29. FORMULÁRIOS
+   ========================================================= */
+
+fieldset {
+    margin-bottom: 30px;
+    padding-top: 25px;
+
+    border: none;
+    border-top: 1px solid var(--indigo);
+}
+
+legend {
+    margin-bottom: 20px;
+
+    color: var(--cyan);
+
+    font-size: 19px;
+    font-weight: bold;
+}
+
+fieldset label {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: var(--ice);
+
+    line-height: 1.6;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+
+    margin-top: 8px;
+
+    padding: 13px;
+
+    color: var(--azure);
+
+    background: rgba(0, 27, 41, 0.5);
+
+    border: 1px solid var(--indigo);
+
+    border-radius: 7px;
+
+    outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--cyan);
+}
+
+textarea {
+    min-height: 120px;
+
+    resize: vertical;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   30. ESTRUTURAS ANTIGAS DE FACULDADES
+   ========================================================= */
+
+.faculdade-filtros {
+    margin-top: 25px;
+
+    padding: 28px;
+
+    background: rgba(51, 60, 119, 0.5);
+
+    border: 1px solid var(--indigo);
+
+    border-radius: 10px;
+}
+
+.filter-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+.faculdade-toolbar {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin: 25px 0;
+
+    color: var(--ice);
+}
+
+.faculdade-results {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   31. RODAPÉ
+   ========================================================= */
+
+footer {
+    margin-top: 40px;
+
+    padding: 35px 5%;
+
+    text-align: center;
+
+    background: rgba(0, 27, 41, 0.95);
+
+    border-top: 1px solid var(--indigo);
+}
+
+footer div {
+    margin-bottom: 8px;
+
+    color: var(--cyan);
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer span {
+    color: var(--ice);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   32. ANIMAÇÃO
+   ========================================================= */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   33. TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 12px;
+
+        padding: 12px 5%;
+    }
+
+    .navbar nav {
+        justify-content: center;
+    }
+
+    .features,
+    .path-grid,
+    .faculdade-results {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-highlights {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .course-list {
+        grid-template-columns: 1fr;
+    }
+
+    .institution-header {
+        flex-direction: column;
+    }
+
+    .institution-header span {
+        align-self: flex-start;
+    }
+
+}
+
+
+/* =========================================================
+   34. CELULAR
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .navbar nav {
+        gap: 2px;
+    }
+
+    .navbar nav a {
+        padding: 8px;
+
+        font-size: 12px;
+    }
+
+    .logo img {
+        width: 150px;
+        height: 60px;
+    }
+
+    .hero-card {
+        margin: 30px 5%;
+
+        padding: 30px 25px;
+    }
+
+    .hero-card h1 {
+        font-size: 28px;
+    }
+
+    .hero-card ul {
+        grid-template-columns: 1fr;
+    }
+
+    .features {
+        margin: 0 5% 40px;
+    }
+
+    .cta-row,
+    .result-actions {
+        flex-direction: column;
+    }
+
+    .cta-row .btn,
+    .result-actions .btn {
+        width: 100%;
+    }
+
+    .container {
+        padding: 35px 20px;
+    }
+
+    .container h1 {
+        font-size: 28px;
+    }
+
+    .quiz-card {
+        padding: 25px 20px;
+    }
+
+    .quiz-actions {
+        flex-direction: column;
+    }
+
+    .quiz-actions .btn {
+        width: 100%;
+    }
+
+    .filter-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .faculdade-toolbar {
+        flex-direction: column;
+    }
+
+    .institution-card,
+    .info-box,
+    .panel,
+    .path-details {
+        padding: 22px;
+    }
+
+    .institution-header h2 {
+        font-size: 20px;
+    }
+
+    .course-list {
+        grid-template-columns: 1fr;
+    }
+
+    .checklist {
+        grid-template-columns: 1fr;
+    }
+
+    .path-details h2 {
+        font-size: 24px;
+    }
+
+    .modelo-curriculo-folha {
+        padding: 40px 25px;
+    }
+
+    .modelo-cabecalho h1 {
+        font-size: 25px;
+    }
+
+    .modelo-cabecalho p,
+    .modelo-secao p {
+        font-size: 15px;
+    }
+
+    .estrutura-curriculo {
+        margin-top: 50px;
+
+        padding: 22px 20px;
+    }
+
+}
+
+
+/* =========================================================
+   35. TELAS MUITO PEQUENAS
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .navbar nav a {
+        padding: 7px 6px;
+
+        font-size: 11px;
+    }
+
+    .hero-card {
+        padding: 25px 18px;
+    }
+
+    .container {
+        padding: 30px 15px;
+    }
+
+    .quiz-card {
+        padding: 20px 15px;
+    }
+
+    .path {
+        padding: 22px;
+    }
+
+    .modelo-curriculo-folha {
+        padding: 30px 18px;
+    }
+
+}

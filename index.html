@@ -1,0 +1,2559 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Entre Futuros</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         CABEÇALHO
+    ========================= -->
+
+    <header class="navbar">
+
+        <a class="logo" href="#" onclick="openTab(event, 'inicio')">
+            <img src="Entre Futuros- Logo.png" alt="Entre Futuros">
+        </a>
+
+        <nav>
+
+            <a href="#"
+               class="nav-link active"
+               data-tab="inicio"
+               onclick="openTab(event, 'inicio')">
+                Início
+            </a>
+
+            <a href="#"
+               class="nav-link"
+               data-tab="teste"
+               onclick="openTab(event, 'teste')">
+                Teste de Perspectiva
+            </a>
+
+            <a href="#"
+               class="nav-link"
+               data-tab="caminhos"
+               onclick="openTab(event, 'caminhos')">
+                Caminhos
+            </a>
+
+            <a href="#"
+               class="nav-link"
+               data-tab="faculdades-rn"
+               onclick="openTab(event, 'faculdades-rn')">
+                Faculdades
+            </a>
+
+            <a href="#"
+               class="nav-link"
+               data-tab="empregos-curriculo"
+               onclick="openTab(event, 'empregos-curriculo')">
+                Empregos e Currículo
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             INÍCIO
+        ========================= -->
+
+        <section id="inicio" class="tab-content active">
+
+            <div class="hero-card">
+
+                <p>UM PROJETO SOBRE SEU FUTURO</p>
+
+                <h1>
+                    O futuro não começa depois da escola.
+                    <br>
+                    Ele começa a ser construído durante ela.
+                </h1>
+
+                <p>
+                    Entenda como suas experiências no ensino médio
+                    influenciam a forma como você enxerga o futuro.
+                </p>
+
+                <h2>O que é o projeto Entre Futuros?</h2>
+
+                <p>
+                    Um projeto para entender como estudantes do ensino
+                    médio constroem sua visão sobre o futuro e exploram
+                    caminhos possíveis depois da escola.
+                </p>
+
+                <ul>
+                    <li>Questionário anônimo</li>
+                    <li>Resultado personalizado</li>
+                    <li>Exploração de caminhos</li>
+                    <li>Orientações práticas</li>
+                </ul>
+
+                <div class="cta-row">
+
+                    <a class="btn primary"
+                       href="#"
+                       onclick="openTab(event, 'teste')">
+                        Descobrir minha perspectiva
+                    </a>
+
+                    <a class="btn secondary"
+                       href="#"
+                       onclick="openTab(event, 'caminhos')">
+                        Ver caminhos
+                    </a>
+
+                </div>
+
+                <br>
+
+                <small>
+                    O teste serve como uma forma de reflexão.
+                    Ele não determina qual profissão você deve seguir.
+                </small>
+
+            </div>
+
+
+            <section class="features container">
+
+                <a href="#"
+                   class="feature"
+                   onclick="openTab(event, 'teste')">
+
+                    <span class="icon purple">*</span>
+
+                    <div>
+                        <h3>Teste de perspectiva</h3>
+
+                        <p>
+                            Reflita sobre como você enxerga seu futuro.
+                        </p>
+                    </div>
+
+                </a>
+
+
+                <a href="#"
+                   class="feature"
+                   onclick="openTab(event, 'caminhos')">
+
+                    <span class="icon yellow">+</span>
+
+                    <div>
+                        <h3>Explore caminhos</h3>
+
+                        <p>
+                            Veja possibilidades e saiba por onde começar.
+                        </p>
+                    </div>
+
+                </a>
+
+
+                <a href="#"
+                   class="feature"
+                   onclick="openTab(event, 'faculdades-rn')">
+
+                    <span class="icon cyan">⌂</span>
+
+                    <div>
+                        <h3>Faculdades do RN</h3>
+
+                        <p>
+                            Conheça instituições e os cursos oferecidos.
+                        </p>
+                    </div>
+
+                </a>
+
+            </section>
+
+        </section>
+
+
+        <!-- =========================
+             TESTE
+        ========================= -->
+
+        <section id="teste" class="tab-content">
+
+            <div class="container">
+
+                <h1>Teste de Perspectiva</h1>
+
+                <p>
+                    Responda ao questionário para entender melhor
+                    como você enxerga seu futuro.
+                </p>
+
+                <div class="highlight">
+
+                    <strong>Importante:</strong>
+
+                    não existe resposta certa ou errada.
+                    O resultado representa apenas uma perspectiva
+                    baseada nas respostas dadas.
+
+                </div>
+
+
+                <form class="quiz-card" id="quizForm">
+
+                    <div class="quiz-progress">
+
+                        <div class="progress-meta">
+
+                            <span id="questionCounter">
+                                Pergunta 1 de 8
+                            </span>
+
+                            <span id="progressValue">
+                                12,5%
+                            </span>
+
+                        </div>
+
+                        <div class="progress-track">
+
+                            <span id="progressBar"
+                                  style="width: 12.5%">
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PERGUNTA 1 -->
+
+                    <div class="question active">
+
+                        <h3>
+                            1. Quando você pensa no futuro depois
+                            do ensino médio, você...
+                        </h3>
+
+                        <label>
+                            <input name="q1"
+                                   type="radio"
+                                   value="determinado">
+
+                            Já tenho um plano bem definido.
+                        </label>
+
+                        <label>
+                            <input name="q1"
+                                   type="radio"
+                                   value="explorador">
+
+                            Tenho algumas ideias, mas quero conhecer
+                            possibilidades.
+                        </label>
+
+                        <label>
+                            <input name="q1"
+                                   type="radio"
+                                   value="transformacao">
+
+                            Mudo bastante de ideia conforme vivo
+                            novas experiências.
+                        </label>
+
+                        <label>
+                            <input name="q1"
+                                   type="radio"
+                                   value="descobrindo">
+
+                            Ainda não faço ideia e estou tentando descobrir.
+                        </label>
+
+                    </div>
+
+
+                    <!-- PERGUNTA 2 -->
+
+                    <div class="question">
+
+                        <h3>
+                            2. O quanto a escola influencia suas
+                            escolhas para o futuro?
+                        </h3>
+
+                        <label>
+                            <input name="q2"
+                                   type="radio"
+                                   value="determinado">
+
+                            Muito: professores e atividades me ajudam
+                            a decidir.
+                        </label>
+
+                        <label>
+                            <input name="q2"
+                                   type="radio"
+                                   value="explorador">
+
+                            Um pouco: algumas experiências despertaram
+                            interesses.
+                        </label>
+
+                        <label>
+                            <input name="q2"
+                                   type="radio"
+                                   value="transformacao">
+
+                            Depende do momento e das experiências.
+                        </label>
+
+                        <label>
+                            <input name="q2"
+                                   type="radio"
+                                   value="descobrindo">
+
+                            Pouco: ainda não vejo uma ligação clara.
+                        </label>
+
+                    </div>
+
+
+                    <!-- PERGUNTA 3 -->
+
+                    <div class="question">
+
+                        <h3>
+                            3. Qual fator mais pesa nas suas decisões?
+                        </h3>
+
+                        <label>
+                            <input name="q3"
+                                   type="radio"
+                                   value="explorador">
+
+                            Meus interesses e curiosidades.
+                        </label>
+
+                        <label>
+                            <input name="q3"
+                                   type="radio"
+                                   value="determinado">
+
+                            Meus objetivos profissionais.
+                        </label>
+
+                        <label>
+                            <input name="q3"
+                                   type="radio"
+                                   value="descobrindo">
+
+                            Minha situação financeira.
+                        </label>
+
+                        <label>
+                            <input name="q3"
+                                   type="radio"
+                                   value="transformacao">
+
+                            Família, amigos e pessoas próximas.
+                        </label>
+
+                    </div>
+
+
+                    <!-- PERGUNTA 4 -->
+
+                    <div class="question">
+
+                        <h3>
+                            4. Quando alguém pergunta
+                            "o que você vai fazer depois da escola?"...
+                        </h3>
+
+                        <label>
+                            <input name="q4"
+                                   type="radio"
+                                   value="determinado">
+
+                            Eu sei exatamente o que responder.
+                        </label>
+
+                        <label>
+                            <input name="q4"
+                                   type="radio"
+                                   value="explorador">
+
+                            Tenho algumas opções para contar.
+                        </label>
+
+                        <label>
+                            <input name="q4"
+                                   type="radio"
+                                   value="transformacao">
+
+                            Minha resposta muda dependendo da época.
+                        </label>
+
+                        <label>
+                            <input name="q4"
+                                   type="radio"
+                                   value="descobrindo">
+
+                            Fico sem saber o que responder.
+                        </label>
+
+                    </div>
+
+
+                    <!-- PERGUNTA 5 -->
+
+                    <div class="question">
+
+                        <h3>
+                            5. O que mais preocupa você sobre o futuro?
+                        </h3>
+
+                        <label>
+                            <input name="q5"
+                                   type="radio"
+                                   value="descobrindo">
+
+                            Não saber qual caminho escolher.
+                        </label>
+
+                        <label>
+                            <input name="q5"
+                                   type="radio"
+                                   value="determinado">
+
+                            Conseguir alcançar meus objetivos.
+                        </label>
+
+                        <label>
+                            <input name="q5"
+                                   type="radio"
+                                   value="explorador">
+
+                            Encontrar algo que realmente combine comigo.
+                        </label>
+
+                        <label>
+                            <input name="q5"
+                                   type="radio"
+                                   value="transformacao">
+
+                            As mudanças que ainda podem acontecer.
+                        </label>
+
+                    </div>
+
+
+                    <!-- PERGUNTA 6 -->
+
+                    <div class="question">
+
+                        <h3>
+                            6. Como você se sente ao pensar em tomar
+                            decisões importantes?
+                        </h3>
+
+                        <label>
+                            <input name="q6"
+                                   type="radio"
+                                   value="determinado">
+
+                            Confiante.
+                        </label>
+
+                        <label>
+                            <input name="q6"
+                                   type="radio"
+                                   value="explorador">
+
+                            Curioso.
+                        </label>
+
+                        <label>
+                            <input name="q6"
+                                   type="radio"
+                                   value="transformacao">
+
+                            Em dúvida, mas aberto a mudanças.
+                        </label>
+
+                        <label>
+                            <input name="q6"
+                                   type="radio"
+                                   value="descobrindo">
+
+                            Inseguro ou sem direção.
+                        </label>
+
+                    </div>
+
+
+                    <!-- PERGUNTA 7 -->
+
+                    <div class="question">
+
+                        <h3>
+                            7. Qual frase mais combina com você?
+                        </h3>
+
+                        <label>
+                            <input name="q7"
+                                   type="radio"
+                                   value="determinado">
+
+                            "Eu já sei onde quero chegar."
+                        </label>
+
+                        <label>
+                            <input name="q7"
+                                   type="radio"
+                                   value="explorador">
+
+                            "Quero experimentar antes de decidir."
+                        </label>
+
+                        <label>
+                            <input name="q7"
+                                   type="radio"
+                                   value="transformacao">
+
+                            "Meu futuro está mudando junto comigo."
+                        </label>
+
+                        <label>
+                            <input name="q7"
+                                   type="radio"
+                                   value="descobrindo">
+
+                            "Ainda estou tentando me encontrar."
+                        </label>
+
+                    </div>
+
+
+                    <!-- PERGUNTA 8 -->
+
+                    <div class="question">
+
+                        <h3>
+                            8. O que você gostaria que a escola
+                            oferecesse mais?
+                        </h3>
+
+                        <label>
+                            <input name="q8"
+                                   type="radio"
+                                   value="explorador">
+
+                            Mais contato com diferentes profissões.
+                        </label>
+
+                        <label>
+                            <input name="q8"
+                                   type="radio"
+                                   value="determinado">
+
+                            Mais preparação para faculdade e carreira.
+                        </label>
+
+                        <label>
+                            <input name="q8"
+                                   type="radio"
+                                   value="transformacao">
+
+                            Mais experiências práticas.
+                        </label>
+
+                        <label>
+                            <input name="q8"
+                                   type="radio"
+                                   value="descobrindo">
+
+                            Mais orientação para quem ainda está indeciso.
+                        </label>
+
+                    </div>
+
+
+                    <div id="quizError"
+                         class="quiz-status hidden">
+                    </div>
+
+
+                    <div class="quiz-actions">
+
+                        <button class="btn secondary"
+                                id="prevBtn"
+                                type="button">
+                            Voltar
+                        </button>
+
+                        <button class="btn primary"
+                                id="nextBtn"
+                                type="button">
+                            Próxima
+                        </button>
+
+                    </div>
+
+                </form>
+
+
+                <div class="result-card hidden"
+                     id="result"
+                     aria-live="polite">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CAMINHOS
+        ========================= -->
+
+        <section id="caminhos" class="tab-content">
+
+            <div class="container">
+
+                <h1>Caminhos</h1>
+
+                <p>
+                    Não existe apenas um caminho depois do ensino médio.
+                    Conheça algumas possibilidades e veja o que pode
+                    ser feito para começar a explorar cada uma delas.
+                </p>
+
+                <div class="highlight">
+
+                    <strong>Antes de escolher:</strong>
+
+                    compare possibilidades, pesquise informações oficiais,
+                    converse com pessoas da área e, sempre que possível,
+                    conheça a rotina real da profissão.
+
+                </div>
+
+
+                <div class="path-grid">
+
+                    <article class="path">
+
+                        <h3>Faculdade</h3>
+
+                        <p>
+                            Para quem deseja aprofundar os estudos
+                            em uma área acadêmica ou profissional.
+                        </p>
+
+                        <button onclick="showPath('Faculdade')">
+                            Explorar
+                        </button>
+
+                    </article>
+
+
+                    <article class="path">
+
+                        <h3>Curso técnico</h3>
+
+                        <p>
+                            Formação profissional mais direcionada
+                            e prática para determinada área.
+                        </p>
+
+                        <button onclick="showPath('Curso técnico')">
+                            Explorar
+                        </button>
+
+                    </article>
+
+
+                    <article class="path">
+
+                        <h3>Trabalho</h3>
+
+                        <p>
+                            Entrar no mercado e construir experiência
+                            também pode fazer parte da trajetória.
+                        </p>
+
+                        <button onclick="showPath('Trabalho')">
+                            Explorar
+                        </button>
+
+                    </article>
+
+
+                    <article class="path">
+
+                        <h3>Empreendedorismo</h3>
+
+                        <p>
+                            Criar projetos, negócios ou soluções
+                            para problemas identificados.
+                        </p>
+
+                        <button onclick="showPath('Empreendedorismo')">
+                            Explorar
+                        </button>
+
+                    </article>
+
+                </div>
+
+
+                <div class="path-details hidden"
+                     id="pathDetails">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FACULDADES DO RN
+        ========================= -->
+
+        <section id="faculdades-rn" class="tab-content">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h1>Faculdades e Instituições do RN</h1>
+
+                    <p>
+                        Conheça algumas das instituições de ensino superior
+                        presentes no Rio Grande do Norte e os cursos oferecidos.
+                    </p>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <h2>Como usar esta página?</h2>
+
+                    <p>
+                        Aqui você pode conhecer instituições de ensino superior
+                        presentes no RN e verificar algumas das áreas e cursos
+                        encontrados em cada uma delas.
+                    </p>
+
+                    <p>
+                        A oferta de cursos pode mudar de acordo com o campus,
+                        modalidade e processo seletivo. Por isso, antes de fazer
+                        uma inscrição, confirme as informações no site oficial
+                        da instituição e no cadastro e-MEC.
+                    </p>
+
+                    <a href="https://emec.mec.gov.br/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="info-link">
+                        Consultar informações oficiais no e-MEC
+                    </a>
+
+                </div>
+
+
+                <!-- UFRN -->
+
+                <div class="institution-card">
+
+                    <div class="institution-header">
+
+                        <h2>
+                            Universidade Federal do Rio Grande do Norte — UFRN
+                        </h2>
+
+                        <span>
+                            Universidade Pública Federal
+                        </span>
+
+                    </div>
+
+                    <p class="institution-description">
+                        A UFRN possui unidades e campi em diferentes municípios
+                        do Rio Grande do Norte, oferecendo cursos em diversas
+                        áreas do conhecimento.
+                    </p>
+
+                    <h3>Cursos encontrados</h3>
+
+                    <div class="course-list">
+
+                        <div class="course">
+                            <strong>Administração</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Arquitetura e Urbanismo</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Artes Visuais</strong>
+                            <span>Licenciatura</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Ciência da Computação</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Ciências Biológicas</strong>
+                            <span>Licenciatura / Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Ciências Contábeis</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Ciências Econômicas</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Ciências Sociais</strong>
+                            <span>Licenciatura / Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Direito</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Educação Física</strong>
+                            <span>Licenciatura / Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Enfermagem</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Engenharia Civil</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Engenharia de Computação</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Engenharia Elétrica</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Farmácia</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Filosofia</strong>
+                            <span>Licenciatura / Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Física</strong>
+                            <span>Licenciatura / Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Geografia</strong>
+                            <span>Licenciatura / Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>História</strong>
+                            <span>Licenciatura / Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Jornalismo</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Letras</strong>
+                            <span>Licenciatura</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Matemática</strong>
+                            <span>Licenciatura / Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Medicina</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Nutrição</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Odontologia</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Pedagogia</strong>
+                            <span>Licenciatura</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Psicologia</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Química</strong>
+                            <span>Licenciatura / Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Sistemas de Informação</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Turismo</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                    </div>
+
+                    <div class="institution-tip">
+
+                        <strong>Dica:</strong>
+
+                        A UFRN possui cursos em diferentes municípios.
+                        Verifique sempre o campus específico do curso
+                        que você deseja.
+
+                    </div>
+
+                </div>
+
+
+                <!-- IFRN -->
+
+                <div class="institution-card">
+
+                    <div class="institution-header">
+
+                        <h2>
+                            Instituto Federal do Rio Grande do Norte — IFRN
+                        </h2>
+
+                        <span>
+                            Instituição Pública Federal
+                        </span>
+
+                    </div>
+
+                    <p class="institution-description">
+                        O IFRN oferece cursos técnicos e também cursos
+                        superiores de graduação em diferentes campi do estado.
+                    </p>
+
+                    <h3>Alguns cursos superiores</h3>
+
+                    <div class="course-list">
+
+                        <div class="course">
+                            <strong>Análise e Desenvolvimento de Sistemas</strong>
+                            <span>Tecnólogo</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Design de Moda</strong>
+                            <span>Tecnólogo</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Engenharia Civil</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Engenharia de Energia</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Engenharia de Software</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Gestão Ambiental</strong>
+                            <span>Tecnólogo</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Gestão de Turismo</strong>
+                            <span>Tecnólogo</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Licenciatura em Física</strong>
+                            <span>Licenciatura</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Licenciatura em Matemática</strong>
+                            <span>Licenciatura</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Redes de Computadores</strong>
+                            <span>Tecnólogo</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Sistemas para Internet</strong>
+                            <span>Tecnólogo</span>
+                        </div>
+
+                    </div>
+
+                    <div class="institution-tip">
+
+                        <strong>Dica:</strong>
+
+                        O curso e o campus disponíveis dependem da unidade
+                        do IFRN. Consulte o campus específico.
+
+                    </div>
+
+                </div>
+
+
+                <!-- UERN -->
+
+                <div class="institution-card">
+
+                    <div class="institution-header">
+
+                        <h2>
+                            Universidade do Estado do Rio Grande do Norte — UERN
+                        </h2>
+
+                        <span>
+                            Universidade Pública Estadual
+                        </span>
+
+                    </div>
+
+                    <p class="institution-description">
+                        A UERN possui campi em diferentes cidades do estado
+                        e oferece cursos de graduação em várias áreas.
+                    </p>
+
+                    <h3>Áreas e cursos</h3>
+
+                    <div class="course-list">
+
+                        <div class="course">
+                            <strong>Administração</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Ciência da Computação</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Ciências Biológicas</strong>
+                            <span>Licenciatura</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Ciências Contábeis</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Direito</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Educação Física</strong>
+                            <span>Licenciatura / Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Enfermagem</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Engenharia de Produção</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Física</strong>
+                            <span>Licenciatura</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Geografia</strong>
+                            <span>Licenciatura</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>História</strong>
+                            <span>Licenciatura</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Letras</strong>
+                            <span>Licenciatura</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Matemática</strong>
+                            <span>Licenciatura</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Medicina</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Pedagogia</strong>
+                            <span>Licenciatura</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Química</strong>
+                            <span>Licenciatura</span>
+                        </div>
+
+                    </div>
+
+                    <div class="institution-tip">
+
+                        <strong>Dica:</strong>
+
+                        Confira em qual campus o curso é oferecido,
+                        pois a UERN distribui seus cursos entre
+                        diferentes municípios.
+
+                    </div>
+
+                </div>
+
+
+                <!-- UNP -->
+
+                <div class="institution-card">
+
+                    <div class="institution-header">
+
+                        <h2>
+                            Universidade Potiguar — UNP
+                        </h2>
+
+                        <span>
+                            Instituição Privada
+                        </span>
+
+                    </div>
+
+                    <p class="institution-description">
+                        A Universidade Potiguar possui cursos em diferentes
+                        áreas, incluindo saúde, tecnologia, negócios,
+                        engenharia e humanas.
+                    </p>
+
+                    <h3>Principais áreas de graduação</h3>
+
+                    <div class="course-list">
+
+                        <div class="course">
+                            <strong>Administração</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Arquitetura e Urbanismo</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Biomedicina</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Ciência da Computação</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Direito</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Educação Física</strong>
+                            <span>Bacharelado / Licenciatura</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Enfermagem</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Engenharia Civil</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Farmácia</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Fisioterapia</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Medicina</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Nutrição</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Odontologia</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                        <div class="course">
+                            <strong>Psicologia</strong>
+                            <span>Bacharelado</span>
+                        </div>
+
+                    </div>
+
+                    <div class="institution-tip">
+
+                        <strong>Dica:</strong>
+
+                        Em instituições privadas, verifique mensalidade,
+                        bolsas, descontos, financiamento e modalidade
+                        do curso antes de realizar a matrícula.
+
+                    </div>
+
+                </div>
+
+
+                <!-- GUIA FINAL -->
+
+                <div class="info-box final-guide">
+
+                    <h2>Antes de escolher uma instituição</h2>
+
+                    <p>
+                        Não escolha apenas pelo nome da faculdade.
+                        Compare o curso, a cidade, o campus, a modalidade,
+                        o turno, a duração e a forma de ingresso.
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            Confira se o curso é oferecido naquele campus.
+                        </li>
+
+                        <li>
+                            Verifique a situação do curso no e-MEC.
+                        </li>
+
+                        <li>
+                            Confira as formas de ingresso disponíveis.
+                        </li>
+
+                        <li>
+                            Veja se o curso é presencial, EAD ou semipresencial.
+                        </li>
+
+                        <li>
+                            Compare os horários das aulas.
+                        </li>
+
+                        <li>
+                            Pesquise os custos quando a instituição for privada.
+                        </li>
+
+                        <li>
+                            Procure informações diretamente nos sites oficiais.
+                        </li>
+
+                    </ul>
+
+                    <p class="source-note">
+
+                        <strong>Fonte de referência:</strong>
+
+                        Cadastro e-MEC, base oficial do Ministério da Educação
+                        para instituições e cursos de educação superior.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             EMPREGOS E CURRÍCULO
+        ========================= -->
+
+        <section id="empregos-curriculo" class="tab-content">
+
+            <div class="container">
+
+                <h1>Empregos e Currículo</h1>
+
+                <p>
+                    Encontre oportunidades e aprenda a se preparar
+                    para entrar no mercado de trabalho.
+                </p>
+
+
+                <!-- PROCURANDO EMPREGO -->
+
+                <div class="panel">
+
+                    <h2>Procurando emprego?</h2>
+
+                    <p>
+                        Começar a procurar uma oportunidade pode parecer
+                        difícil, principalmente quando você ainda não
+                        possui experiência profissional.
+                    </p>
+
+                    <p>
+                        Procure vagas que aceitem estudantes e candidatos
+                        sem experiência. Jovem aprendiz, estágio e primeiro
+                        emprego são algumas possibilidades.
+                    </p>
+
+                    <div class="highlight">
+
+                        <strong>Uma forma simples de começar:</strong>
+
+                        <ol class="steps">
+
+                            <li>
+                                Escolha uma área que desperte seu interesse.
+                            </li>
+
+                            <li>
+                                Pesquise quais vagas aparecem nessa área.
+                            </li>
+
+                            <li>
+                                Veja quais requisitos são mais comuns.
+                            </li>
+
+                            <li>
+                                Identifique o que você já possui e o que
+                                ainda precisa aprender.
+                            </li>
+
+                            <li>
+                                Prepare seu currículo de acordo com a vaga.
+                            </li>
+
+                        </ol>
+
+                    </div>
+
+                </div>
+
+
+                <!-- OPORTUNIDADES -->
+
+                <div class="path-grid">
+
+                    <article class="path">
+
+                        <h3>Natal - RN</h3>
+
+                        <p>
+                            Pesquise oportunidades em comércio,
+                            atendimento, administração, tecnologia,
+                            turismo e serviços.
+                        </p>
+
+                        <ul>
+                            <li>Jovem aprendiz</li>
+                            <li>Primeiro emprego</li>
+                            <li>Estágios</li>
+                            <li>Auxiliar administrativo</li>
+                        </ul>
+
+                    </article>
+
+
+                    <article class="path">
+
+                        <h3>Extremoz - RN</h3>
+
+                        <p>
+                            Pesquise oportunidades no município
+                            e também em cidades próximas.
+                        </p>
+
+                        <ul>
+                            <li>Comércio</li>
+                            <li>Serviços</li>
+                            <li>Logística</li>
+                            <li>Jovem aprendiz</li>
+                        </ul>
+
+                    </article>
+
+
+                    <article class="path">
+
+                        <h3>Como procurar</h3>
+
+                        <p>
+                            Utilize palavras-chave relacionadas
+                            à vaga que você deseja.
+                        </p>
+
+                        <ul>
+                            <li>Jovem aprendiz Natal RN</li>
+                            <li>Primeiro emprego Natal RN</li>
+                            <li>Estágio Extremoz RN</li>
+                            <li>Auxiliar administrativo RN</li>
+                        </ul>
+
+                    </article>
+
+
+                    <article class="path">
+
+                        <h3>Onde pesquisar</h3>
+
+                        <p>
+                            Procure oportunidades em plataformas
+                            conhecidas e confira sempre a empresa
+                            responsável pela vaga.
+                        </p>
+
+                        <div class="source-links">
+
+                            <a href="https://www.gov.br/trabalho-e-emprego/"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Gov.br
+                            </a>
+
+                            <a href="https://portal.ciee.org.br/"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                CIEE
+                            </a>
+
+                            <a href="https://www.nube.com.br/"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Nube
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- GUIA DO CURRÍCULO -->
+
+                <div class="panel">
+
+                    <h2>Guia para fazer um bom currículo</h2>
+
+                    <p>
+                        O currículo é um documento usado para apresentar
+                        suas informações profissionais a uma empresa.
+                    </p>
+
+                    <p>
+                        Ele deve ser claro, organizado e fácil de ler.
+                        Você não precisa ter muitos anos de experiência
+                        para fazer um currículo.
+                    </p>
+
+                    <p>
+                        Para estudantes, cursos, projetos escolares,
+                        atividades, conhecimentos e habilidades também
+                        podem ajudar a apresentar seu perfil.
+                    </p>
+
+                </div>
+
+
+                <!-- O QUE COLOCAR -->
+
+                <div class="panel">
+
+                    <h2>O que colocar no currículo?</h2>
+
+                    <h3>1. Informações pessoais</h3>
+
+                    <p>
+                        Coloque seu nome, telefone, e-mail e cidade.
+                        Use um e-mail que tenha aparência profissional.
+                    </p>
+
+                    <h3>2. Objetivo profissional</h3>
+
+                    <p>
+                        Escreva de forma curta qual tipo de oportunidade
+                        você procura.
+                    </p>
+
+                    <h3>3. Formação</h3>
+
+                    <p>
+                        Informe sua escolaridade atual.
+                        Se ainda estiver estudando, coloque que o
+                        ensino médio está em andamento.
+                    </p>
+
+                    <h3>4. Cursos e conhecimentos</h3>
+
+                    <p>
+                        Inclua cursos livres, informática, idiomas,
+                        ferramentas digitais e outros conhecimentos
+                        relacionados à vaga.
+                    </p>
+
+                    <h3>5. Experiências</h3>
+
+                    <p>
+                        Se você já trabalhou, coloque as experiências
+                        anteriores e informe o cargo e as principais
+                        atividades realizadas.
+                    </p>
+
+                    <p>
+                        Ainda não possui experiência?
+                        Não invente. Você pode destacar projetos
+                        escolares, cursos e atividades relevantes.
+                    </p>
+
+                    <h3>6. Habilidades</h3>
+
+                    <p>
+                        Escolha habilidades que realmente façam parte
+                        do seu perfil, como organização, comunicação,
+                        criatividade ou trabalho em equipe.
+                    </p>
+
+                </div>
+
+
+                <!-- CHECKLIST -->
+
+                <div class="panel">
+
+                    <h2>Checklist do currículo</h2>
+
+                    <div class="checklist">
+
+                        <label>
+                            <input type="checkbox">
+                            Nome completo
+                        </label>
+
+                        <label>
+                            <input type="checkbox">
+                            E-mail profissional
+                        </label>
+
+                        <label>
+                            <input type="checkbox">
+                            Telefone atualizado
+                        </label>
+
+                        <label>
+                            <input type="checkbox">
+                            Cidade e estado
+                        </label>
+
+                        <label>
+                            <input type="checkbox">
+                            Objetivo profissional
+                        </label>
+
+                        <label>
+                            <input type="checkbox">
+                            Formação escolar
+                        </label>
+
+                        <label>
+                            <input type="checkbox">
+                            Cursos e conhecimentos
+                        </label>
+
+                        <label>
+                            <input type="checkbox">
+                            Experiências profissionais
+                        </label>
+
+                        <label>
+                            <input type="checkbox">
+                            Projetos ou atividades relevantes
+                        </label>
+
+                        <label>
+                            <input type="checkbox">
+                            Habilidades
+                        </label>
+
+                        <label>
+                            <input type="checkbox">
+                            Revisão ortográfica
+                        </label>
+
+                        <label>
+                            <input type="checkbox">
+                            Informações verdadeiras e atualizadas
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DICAS -->
+
+                <div class="panel">
+
+                    <h2>Dicas importantes</h2>
+
+                    <ul>
+
+                        <li>
+                            Mantenha o currículo organizado e fácil de ler.
+                        </li>
+
+                        <li>
+                            Evite colocar informações que não tenham
+                            relação com a oportunidade.
+                        </li>
+
+                        <li>
+                            Revise o português antes de enviar.
+                        </li>
+
+                        <li>
+                            Use informações verdadeiras.
+                        </li>
+
+                        <li>
+                            Mantenha telefone e e-mail atualizados.
+                        </li>
+
+                        <li>
+                            Adapte o objetivo profissional para
+                            a oportunidade desejada.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- O QUE EVITAR -->
+
+                <div class="panel">
+
+                    <h2>O que evitar no currículo</h2>
+
+                    <ul>
+
+                        <li>
+                            Informações falsas ou exageradas.
+                        </li>
+
+                        <li>
+                            Textos muito longos.
+                        </li>
+
+                        <li>
+                            Erros de português.
+                        </li>
+
+                        <li>
+                            Informações sem relação com a vaga.
+                        </li>
+
+                        <li>
+                            E-mails pouco profissionais.
+                        </li>
+
+                        <li>
+                            Informações desatualizadas.
+                        </li>
+
+                        <li>
+                            Habilidades que você não possui.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- =========================
+                     EXEMPLO DE CURRÍCULO
+                ========================= -->
+
+                <div class="curriculo-exemplos">
+
+                    <div class="curriculo-exemplo">
+
+                        <h3>Exemplo de Currículo</h3>
+
+
+                        <!-- FOLHA BRANCA -->
+
+                        <div class="modelo-curriculo-folha">
+
+                            <div class="modelo-cabecalho">
+
+                                <h1>Nome Completo</h1>
+
+                                <p>
+                                    Telefone &nbsp;|&nbsp;
+                                    Email &nbsp;|&nbsp;
+                                    Cidade - Estado
+                                </p>
+
+                                <p class="modelo-instrucao">
+                                    (Inserir o nome completo do estudante,
+                                    telefone, e-mail e cidade onde reside)
+                                </p>
+
+                            </div>
+
+
+                            <section class="modelo-secao">
+
+                                <h2>Objetivo</h2>
+
+                                <p class="modelo-instrucao">
+                                    (Preencha aqui o objetivo profissional,
+                                    indicando o tipo de oportunidade que
+                                    procura e a área na qual possui interesse.)
+                                </p>
+
+                            </section>
+
+
+                            <section class="modelo-secao">
+
+                                <h2>Formação acadêmica</h2>
+
+                                <p>
+                                    <strong>Curso técnico</strong> -
+                                    Instituição
+                                    <br>
+                                    Cidade, Estado -
+                                    Formação: mês e ano de previsão
+                                </p>
+
+                                <p class="modelo-instrucao">
+                                    (Informe sua formação atual. Para estudantes,
+                                    pode ser colocado o ensino médio ou curso
+                                    técnico que ainda está em andamento.)
+                                </p>
+
+                                <p class="modelo-instrucao exemplo">
+
+                                    <strong>
+                                        Curso Técnico de Administração
+                                    </strong>
+
+                                    - Escola Estadual XX
+
+                                    <br>
+
+                                    Natal, Rio Grande do Norte -
+                                    Formação: dezembro de 2026
+
+                                </p>
+
+                            </section>
+
+
+                            <section class="modelo-secao">
+
+                                <h2>Habilidades e Competências</h2>
+
+                                <p class="modelo-instrucao">
+                                    (Coloque habilidades que realmente possui
+                                    e que podem ser importantes para a
+                                    oportunidade desejada.)
+                                </p>
+
+                                <p class="modelo-instrucao exemplo">
+                                    Exemplo: conhecimentos em informática,
+                                    comunicação, organização e trabalho
+                                    em equipe.
+                                </p>
+
+                            </section>
+
+
+                            <section class="modelo-secao">
+
+                                <h2>Idiomas</h2>
+
+                                <p class="modelo-item">
+
+                                    <strong>Inglês</strong> -
+
+                                    <span class="modelo-instrucao">
+                                        (Informar o nível: básico,
+                                        intermediário, avançado ou fluente)
+                                    </span>
+
+                                </p>
+
+                                <p class="modelo-item">
+
+                                    <strong>Espanhol</strong> -
+
+                                    <span class="modelo-instrucao">
+                                        (Informar o nível correspondente)
+                                    </span>
+
+                                </p>
+
+                            </section>
+
+
+                            <section class="modelo-secao">
+
+                                <h2>Informações Complementares</h2>
+
+                                <p class="modelo-instrucao">
+                                    (Inclua cursos, certificados,
+                                    projetos escolares, atividades
+                                    extracurriculares, trabalhos voluntários
+                                    ou outras experiências que possam
+                                    contribuir para sua apresentação
+                                    profissional.)
+                                </p>
+
+                                <p class="modelo-instrucao exemplo">
+
+                                    <strong>Exemplo:</strong>
+
+                                    Curso básico de informática com carga
+                                    horária de 80 horas, realizado no
+                                    Instituto XX.
+
+                                </p>
+
+                            </section>
+
+                        </div>
+
+
+                        <!-- EXPLICAÇÃO DO EXEMPLO -->
+
+                        <div class="estrutura-curriculo">
+
+                            <h3>
+                                Entendendo a estrutura do exemplo
+                            </h3>
+
+                            <p>
+                                Este modelo apresenta uma estrutura simples
+                                de currículo, especialmente útil para
+                                estudantes e pessoas que estão procurando
+                                o primeiro emprego.
+                            </p>
+
+
+                            <ul>
+
+                                <li>
+
+                                    <strong>Nome e contato:</strong>
+
+                                    aparecem no início para que a empresa
+                                    consiga identificar o candidato e
+                                    entrar em contato.
+
+                                </li>
+
+                                <li>
+
+                                    <strong>Objetivo:</strong>
+
+                                    apresenta de forma breve o tipo de
+                                    oportunidade que o estudante está
+                                    procurando.
+
+                                </li>
+
+                                <li>
+
+                                    <strong>Formação acadêmica:</strong>
+
+                                    mostra a escolaridade atual e outros
+                                    cursos que estejam sendo realizados.
+
+                                </li>
+
+                                <li>
+
+                                    <strong>
+                                        Habilidades e competências:
+                                    </strong>
+
+                                    apresenta conhecimentos e características
+                                    que podem ser relevantes para a vaga.
+
+                                </li>
+
+                                <li>
+
+                                    <strong>Idiomas:</strong>
+
+                                    informa quais línguas o candidato conhece
+                                    e seu nível de conhecimento.
+
+                                </li>
+
+                                <li>
+
+                                    <strong>
+                                        Informações complementares:
+                                    </strong>
+
+                                    podem incluir cursos, certificados,
+                                    projetos escolares, atividades voluntárias
+                                    e outras experiências relevantes.
+
+                                </li>
+
+                            </ul>
+
+
+                            <div class="highlight">
+
+                                <strong>Importante:</strong>
+
+                                quem ainda não possui experiência profissional
+                                não precisa inventar experiências. É possível
+                                destacar a formação escolar, cursos, projetos,
+                                conhecimentos e atividades que realmente foram
+                                realizados.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- COMO SE APRESENTAR -->
+
+                <div class="panel">
+
+                    <h2>Como se apresentar</h2>
+
+                    <p>
+                        Ao entrar em contato com uma empresa,
+                        seja educado e objetivo.
+                    </p>
+
+                    <h3>Exemplo de mensagem</h3>
+
+                    <blockquote>
+
+                        Olá! Meu nome é [SEU NOME].
+                        Sou estudante e estou buscando uma
+                        oportunidade de [JOVEM APRENDIZ /
+                        PRIMEIRO EMPREGO / ESTÁGIO].
+                        Tenho interesse na área de [ÁREA]
+                        e possuo conhecimentos em [HABILIDADES].
+                        Gostaria de saber se a empresa possui
+                        oportunidades compatíveis com meu perfil.
+                        Agradeço pela atenção!
+
+                    </blockquote>
+
+                </div>
+
+
+                <!-- CUIDADOS -->
+
+                <div class="panel">
+
+                    <h2>Cuidado ao procurar vagas</h2>
+
+                    <p>
+                        Nem toda oportunidade encontrada na internet
+                        é confiável. Antes de enviar documentos ou
+                        informações pessoais, verifique a empresa.
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            Confira o nome e os contatos da empresa.
+                        </li>
+
+                        <li>
+                            Prefira plataformas conhecidas.
+                        </li>
+
+                        <li>
+                            Desconfie de promessas de dinheiro fácil.
+                        </li>
+
+                        <li>
+                            Não envie senhas ou códigos de segurança.
+                        </li>
+
+                        <li>
+                            Não pague para participar de um processo
+                            seletivo sem verificar cuidadosamente
+                            a situação.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- ANTES DE ENVIAR -->
+
+                <div class="panel">
+
+                    <h2>Antes de enviar</h2>
+
+                    <p>
+                        Faça uma última conferência. Veja se o
+                        currículo está atualizado, se não possui
+                        erros e se as informações correspondem
+                        à vaga que você deseja.
+                    </p>
+
+                    <p>
+                        Um currículo não precisa ser cheio de informações.
+                        O mais importante é apresentar seu perfil de forma
+                        clara, verdadeira e organizada.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         RODAPÉ
+    ========================= -->
+
+    <footer>
+
+        <div>
+            Entre Futuros
+        </div>
+
+        <span>
+            Projeto escolar • Sem login
+        </span>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT PRINCIPAL -->
+
+    <script src="script.js"></script>
+
+
+    <!-- FUNÇÃO DOS CAMINHOS -->
+
+    <script>
+
+        function showPath(path) {
+
+            const details = document.getElementById("pathDetails");
+
+            let content = "";
+
+
+            if (path === "Faculdade") {
+
+                content = `
+
+                    <h2>Faculdade</h2>
+
+                    <p>
+                        A faculdade é uma possibilidade para quem deseja
+                        realizar uma formação de nível superior e aprofundar
+                        seus conhecimentos em determinada área.
+                    </p>
+
+                    <h3>O que você pode fazer para começar?</h3>
+
+                    <ul>
+                        <li>
+                            Pesquise cursos relacionados aos seus interesses.
+                        </li>
+
+                        <li>
+                            Conheça as instituições que oferecem esses cursos.
+                        </li>
+
+                        <li>
+                            Compare duração, localização, horários e modalidades.
+                        </li>
+
+                        <li>
+                            Pesquise as formas de ingresso, como ENEM
+                            e vestibulares.
+                        </li>
+
+                        <li>
+                            Confira as informações diretamente nos sites oficiais.
+                        </li>
+                    </ul>
+
+                    <h3>Informações importantes</h3>
+
+                    <p>
+                        Um mesmo curso pode ser oferecido por diferentes
+                        instituições e apresentar diferenças de duração,
+                        modalidade, grade curricular, turno e formas de ingresso.
+                    </p>
+
+                    <p>
+                        Também existem diferentes tipos de graduação, como
+                        bacharelado, licenciatura e curso superior de tecnologia.
+                    </p>
+
+                    <h3>Dicas</h3>
+
+                    <ul>
+
+                        <li>
+                            Não escolha um curso apenas pelo nome da profissão.
+                        </li>
+
+                        <li>
+                            Pesquise as matérias estudadas durante a graduação.
+                        </li>
+
+                        <li>
+                            Conheça possíveis áreas de atuação.
+                        </li>
+
+                        <li>
+                            Converse com estudantes ou profissionais da área.
+                        </li>
+
+                        <li>
+                            Verifique as oportunidades existentes na sua região.
+                        </li>
+
+                        <li>
+                            Compare diferentes instituições antes de decidir.
+                        </li>
+
+                    </ul>
+
+                    <div class="highlight">
+
+                        <strong>Por onde começar:</strong>
+
+                        escolha duas ou três áreas que despertam seu interesse
+                        e pesquise quais cursos superiores estão relacionados
+                        a elas.
+
+                    </div>
+
+                `;
+
+            }
+
+
+            else if (path === "Curso técnico") {
+
+                content = `
+
+                    <h2>Curso técnico</h2>
+
+                    <p>
+                        O curso técnico oferece uma formação profissional
+                        direcionada para determinada área e pode ajudar o
+                        estudante a desenvolver conhecimentos práticos.
+                    </p>
+
+                    <h3>O que você pode fazer para começar?</h3>
+
+                    <ul>
+
+                        <li>
+                            Pesquise quais cursos técnicos existem na sua região.
+                        </li>
+
+                        <li>
+                            Veja quais instituições oferecem a formação.
+                        </li>
+
+                        <li>
+                            Confira a duração e os horários do curso.
+                        </li>
+
+                        <li>
+                            Verifique os requisitos para matrícula.
+                        </li>
+
+                        <li>
+                            Pesquise quais atividades fazem parte da formação.
+                        </li>
+
+                    </ul>
+
+                    <h3>Informações importantes</h3>
+
+                    <p>
+                        Existem cursos técnicos em áreas como tecnologia,
+                        administração, saúde, indústria, meio ambiente,
+                        comunicação e muitas outras.
+                    </p>
+
+                    <p>
+                        A formação pode ser uma alternativa para quem deseja
+                        desenvolver conhecimentos profissionais antes ou depois
+                        de concluir o ensino médio.
+                    </p>
+
+                    <h3>Dicas</h3>
+
+                    <ul>
+
+                        <li>
+                            Escolha uma área que realmente desperte seu interesse.
+                        </li>
+
+                        <li>
+                            Confira se o curso possui reconhecimento oficial.
+                        </li>
+
+                        <li>
+                            Pesquise a estrutura e os conteúdos ensinados.
+                        </li>
+
+                        <li>
+                            Veja se existem oportunidades de estágio.
+                        </li>
+
+                        <li>
+                            Pesquise quais funções podem ser exercidas depois
+                            da formação.
+                        </li>
+
+                        <li>
+                            Compare diferentes instituições.
+                        </li>
+
+                    </ul>
+
+                    <div class="highlight">
+
+                        <strong>Por onde começar:</strong>
+
+                        faça uma lista das áreas que você gostaria de conhecer
+                        e procure cursos técnicos relacionados a elas.
+
+                    </div>
+
+                `;
+
+            }
+
+
+            else if (path === "Trabalho") {
+
+                content = `
+
+                    <h2>Trabalho</h2>
+
+                    <p>
+                        Entrar no mercado de trabalho pode ser uma forma de
+                        adquirir experiência, desenvolver habilidades e conhecer
+                        melhor diferentes áreas profissionais.
+                    </p>
+
+                    <h3>O que você pode fazer para começar?</h3>
+
+                    <ul>
+
+                        <li>
+                            Prepare um currículo simples e organizado.
+                        </li>
+
+                        <li>
+                            Procure oportunidades destinadas a estudantes.
+                        </li>
+
+                        <li>
+                            Pesquise programas de jovem aprendiz e estágio.
+                        </li>
+
+                        <li>
+                            Conheça plataformas de emprego confiáveis.
+                        </li>
+
+                        <li>
+                            Observe os requisitos das vagas que despertam
+                            seu interesse.
+                        </li>
+
+                    </ul>
+
+                    <h3>Informações importantes</h3>
+
+                    <p>
+                        Nem todas as vagas exigem experiência profissional.
+                        Algumas oportunidades são destinadas justamente a
+                        estudantes ou pessoas que estão começando a carreira.
+                    </p>
+
+                    <p>
+                        Cursos, projetos escolares, conhecimentos de informática,
+                        idiomas e outras experiências também podem ajudar a
+                        apresentar suas habilidades.
+                    </p>
+
+                    <h3>Dicas</h3>
+
+                    <ul>
+
+                        <li>
+                            Não invente experiências no currículo.
+                        </li>
+
+                        <li>
+                            Adapte seu currículo para a oportunidade desejada.
+                        </li>
+
+                        <li>
+                            Leia atentamente os requisitos da vaga.
+                        </li>
+
+                        <li>
+                            Prepare-se para explicar seus interesses e habilidades.
+                        </li>
+
+                        <li>
+                            Pesquise a empresa antes de participar de uma seleção.
+                        </li>
+
+                        <li>
+                            Tenha cuidado ao compartilhar informações pessoais.
+                        </li>
+
+                    </ul>
+
+                    <div class="highlight">
+
+                        <strong>Por onde começar:</strong>
+
+                        escolha uma área de interesse, pesquise vagas para
+                        iniciantes e observe quais conhecimentos aparecem
+                        com mais frequência.
+
+                    </div>
+
+                `;
+
+            }
+
+
+            else if (path === "Empreendedorismo") {
+
+                content = `
+
+                    <h2>Empreendedorismo</h2>
+
+                    <p>
+                        O empreendedorismo envolve identificar necessidades,
+                        criar soluções e desenvolver projetos ou negócios.
+                        Ele pode começar de maneira pequena e ser desenvolvido
+                        gradualmente.
+                    </p>
+
+                    <h3>O que você pode fazer para começar?</h3>
+
+                    <ul>
+
+                        <li>
+                            Observe problemas ou necessidades ao seu redor.
+                        </li>
+
+                        <li>
+                            Pense em possíveis soluções.
+                        </li>
+
+                        <li>
+                            Pesquise quem poderia utilizar essa solução.
+                        </li>
+
+                        <li>
+                            Analise custos e recursos necessários.
+                        </li>
+
+                        <li>
+                            Teste a ideia antes de investir muito.
+                        </li>
+
+                    </ul>
+
+                    <h3>Informações importantes</h3>
+
+                    <p>
+                        Empreender não significa necessariamente abrir uma
+                        grande empresa. Um projeto, serviço ou pequeno negócio
+                        também pode começar como uma experiência de aprendizagem.
+                    </p>
+
+                    <p>
+                        É importante estudar o público, os custos, os concorrentes,
+                        a divulgação e os possíveis riscos antes de colocar uma
+                        ideia em prática.
+                    </p>
+
+                    <h3>Dicas</h3>
+
+                    <ul>
+
+                        <li>
+                            Comece identificando um problema real.
+                        </li>
+
+                        <li>
+                            Converse com possíveis usuários ou clientes.
+                        </li>
+
+                        <li>
+                            Faça um planejamento simples.
+                        </li>
+
+                        <li>
+                            Evite investir dinheiro sem pesquisar primeiro.
+                        </li>
+
+                        <li>
+                            Aprenda sobre organização financeira.
+                        </li>
+
+                        <li>
+                            Esteja aberto a modificar sua ideia quando necessário.
+                        </li>
+
+                    </ul>
+
+                    <div class="highlight">
+
+                        <strong>Por onde começar:</strong>
+
+                        escolha um problema que você conhece e tente pensar
+                        em uma solução simples que poderia ajudar outras pessoas.
+
+                    </div>
+
+                `;
+
+            }
+
+
+            details.innerHTML = content;
+
+            details.classList.remove("hidden");
+
+
+            setTimeout(() => {
+
+                details.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+
+            }, 100);
+
+        }
+
+    </script>
+
+</body>
+
+</html>
